@@ -1,6 +1,6 @@
 import { Food } from './food';
 
-describe('Food', () => {
+xdescribe('Food', () => {
   let food : Food;
   
   beforeEach(() =>{
@@ -20,6 +20,13 @@ describe('Food', () => {
     food.raisePrice();
 
     expect(food.price).toBeGreaterThan(0);
+    //expect(food.price).not.toBe(0);
+  })
+
+  it('should have a lowered price', () => {
+    food.lowerPrice();
+
+    expect(food.price).toBeLessThan(0);
     //expect(food.price).not.toBe(0);
   })
 });

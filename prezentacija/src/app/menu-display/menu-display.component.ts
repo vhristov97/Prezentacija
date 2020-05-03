@@ -15,4 +15,12 @@ export class MenuDisplayComponent implements OnInit {
   ngOnInit(): void {
     this.menu = this.menuService.getMenu();
   }
+
+  raisePrice(food: Food){
+    food.raisePrice();
+  }
+
+  lowerPrice(food: Food){
+    food.lowerPrice();
+  }
 }
