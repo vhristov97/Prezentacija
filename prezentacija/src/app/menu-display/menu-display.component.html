@@ -1,0 +1,24 @@
+<h1 class="text-center mt-3 mb-3">MENU</h1>
+<div class="container">
+    <h3>{{status}}</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let menuItem of menu">
+                <td>{{menuItem.name}}</td>
+                <td>{{menuItem.price}}</td>
+                <td>
+                    <button id="raise-btn" class="btn btn-success mr-1" [disabled]="menuItem.price > 1000 || menuItem.price === 1000" (click)="raisePrice(menuItem)">Raise price</button>
+                    <button id="lower-btn" class="btn btn-success" [disabled]="menuItem.price < 0 || menuItem.price === 0" (click)="lowerPrice(menuItem)">Lower price</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="status-btn" class="btn btn-success" (click)="changeStatus()">Change status</button>
+</div>
