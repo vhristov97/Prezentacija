@@ -1,5 +1,6 @@
 <h1 class="text-center mt-3 mb-3">MENU</h1>
 <div class="container">
+    <h3>{{status}}</h3>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -19,4 +20,5 @@
             </tr>
         </tbody>
     </table>
+    <button id="status-btn" class="btn btn-success" (click)="changeStatus()">Change status</button>
 </div>

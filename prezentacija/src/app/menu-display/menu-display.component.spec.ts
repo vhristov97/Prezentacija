@@ -118,4 +118,37 @@ describe('MenuDisplayComponent', () => {
     fixture.detectChanges();
     expect(buttonRaise.disabled).toBeFalse();
   })
+
+  it('should change status message to "Needs to be updated"', fakeAsync(() => {
+    menuServiceSpy.getMenu.and.returnValue([]);
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    const h3 = fixture.nativeElement.querySelector("h3");
+    expect(h3.textContent).toBe("Up to date");
+
+    fixture.nativeElement.querySelector("#status-btn").click();
+
+    tick(1000);
+    fixture.detectChanges();
+    
+    expect(h3.textContent).toBe("Needs to be updated");
+  }))
+
+  it('should change status message to "Up to date"', fakeAsync(() => {
+    menuServiceSpy.getMenu.and.returnValue([]);
+    component.ngOnInit();
+    component.status = "Needs to be updated";
+    fixture.detectChanges();
+
+    const h3 = fixture.nativeElement.querySelector("h3");
+    expect(h3.textContent).toBe("Needs to be updated");
+
+    fixture.nativeElement.querySelector("#status-btn").click();
+
+    tick(1000);
+    fixture.detectChanges();
+    
+    expect(h3.textContent).toBe("Up to date");
+  }))
 });
