@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { MenuService } from './menu.service';
 import { Food } from 'src/app/enitities/food/food';
 
-xdescribe('MenuService', () => {
+describe('MenuService', () => {
   let service: MenuService;
 
   beforeEach(() => {
@@ -20,7 +20,7 @@ xdescribe('MenuService', () => {
   })
 
   it('should add pizza to the menu', () => {
-    const pizza = new Food("Pizza", 250);
+    const pizza = new Food("Pizza", 250);//
     service.addFood(pizza);
     
     expect(service.menu).toContain(pizza);

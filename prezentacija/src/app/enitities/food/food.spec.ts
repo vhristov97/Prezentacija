@@ -1,6 +1,6 @@
 import { Food } from './food';
 
-xdescribe('Food', () => {
+describe('Food', () => {
   let food : Food;
   
   beforeEach(() =>{
