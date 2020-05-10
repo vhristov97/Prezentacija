@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core
 import { MenuDisplayComponent } from './menu-display.component';
 import { MenuService } from '../services/menu/menu.service';
 import { Food } from '../enitities/food/food';
-import { By } from '@angular/platform-browser';
 
 describe('MenuDisplayComponent', () => {
   let component: MenuDisplayComponent;
