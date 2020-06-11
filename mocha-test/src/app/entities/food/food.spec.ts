@@ -17,7 +17,7 @@ describe('Food', () => {
     //expect(food.name).toBe("foodItem");
     //expect(food.price).toBe(0);
     assert.strictEqual(food.name, "foodItem");
-    assert.strictEqual(food.price, 0);
+    assert.strictEqual(food.price, 0);//
   })
 
   it('should have a raised price', () => {

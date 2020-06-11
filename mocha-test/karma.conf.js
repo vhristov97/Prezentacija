@@ -8,7 +8,6 @@ module.exports = function (config) {
     plugins: [
       require('karma-mocha'),
       require('karma-chai'),
-      require('karma-sinon'),
       require('karma-firefox-launcher'),
       require('karma-mocha-reporter'),
       require('karma-coverage-istanbul-reporter'),
